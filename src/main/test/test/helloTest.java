@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.meterware.httpunit.GetMethodWebRequest;
-import com.meterware.httpunit.WebConversation;
 import com.meterware.httpunit.WebRequest;
 import com.meterware.httpunit.WebResponse;
 import com.meterware.servletunit.ServletRunner;
@@ -31,7 +30,7 @@ public class helloTest extends TestCase {
 		try {
 			// 创建Servlet的运行环境
 			ServletRunner servletRunner = new ServletRunner();
-			servletRunner.registerServlet("hello", hello.class.getName());
+			servletRunner.registerServlet("test/hello", hello.class.getName());
 			ServletUnitClient servletUnitClient = servletRunner.newClient();
 
 			// 模仿用户访问http://localhost:8080/test/hello
